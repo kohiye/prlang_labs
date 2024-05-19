@@ -7,7 +7,7 @@ private:
     double m_Re{};
     double m_Im{};
 public:
-    Complex(){};
+    Complex() = default;
     Complex(double real, double img=0):m_Re{real},m_Im{img}{};
 
     Complex& operator= (const Complex& num);
