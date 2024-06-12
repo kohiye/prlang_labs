@@ -49,7 +49,9 @@ void readFromFile(const std::string& fname, Vector& vector){
 int main()
 {
     Vector vector;
-    readFromFile("Vehicles.txt", vector);
-    writeToFile("Vh.txt", vector);
+    readFromFile("Vh.txt", vector);
+    for (unsigned int i{0}; i<vector.size(); ++i)
+        vector[i]->signal();
+    writeToFile("Vehicles.txt", vector);
     return 0;
 };
